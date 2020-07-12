@@ -2,14 +2,14 @@ arch: s390x
 services:
   - docker
 script: 
-    docker build -t Webappdocker -f Dockerfile .
+    docker build -t dotnetcalender -f Dockerfile .
 before_deploy:
-    - docker tag  Webappdocker  "$DOCKER_USERNAME"/Webappdockertravis:latest
+    - docker tag  dotnetcalender  "$DOCKER_USERNAME"/dotnetcalender:latest
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin  
 deploy:
   provider: script
   script: 
-     docker push "$DOCKER_USERNAME"/Webappdockertravis:latest
+     docker push "$DOCKER_USERNAME"/dotnetcalender:latest
   on:
     branch: master  
     

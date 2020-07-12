@@ -15,3 +15,4 @@ WORKDIR /usr/lib/xsp/test
 
 EXPOSE 9090
 ENTRYPOINT [ "xsp4","--port","9090","--nonstop"]
+
