@@ -11,7 +11,7 @@ ADD calender.aspx.cs /usr/lib/xsp/test/calender.aspx.cs
 VOLUME /app
 WORKDIR /usr/lib/xsp/test
 
-RUN mcs /t:library /out:calender390x.dll -r:System.Web -r:System.Data -r:System.Drawing -r:System.Web.UI calender.aspx.cs
+RUN mcs /t:library /out:calender390x.dll -r:System.Web -r:System.Data -r:System.Drawing calender.aspx.cs
 
 
 EXPOSE 9090
